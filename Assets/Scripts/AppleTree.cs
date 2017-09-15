@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AppleTree : MonoBehaviour {
     //Prefab for instantiating apples
-    public float applePrefab;
+    public GameObject applePrefab;
     public float speed = 1f;
     public float leftAndRightEdge = 10f;
     public float chanceToChangeDirection = 0.1f;
@@ -13,7 +13,13 @@ public class AppleTree : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //dropping apples every second
+        InvokeRepeating("DropApple", 2f, secondsBetweenDrops);
 	}
+
+    void DropApple () {
+        GameObject apple = Instantiate(applePrefab) as GameObject;
+        apple.transform.position = transform.position;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -27,12 +33,12 @@ public class AppleTree : MonoBehaviour {
             speed = Mathf.Abs(speed);
         } else if (pos.x > leftAndRightEdge) {
             speed = -Mathf.Abs(speed);
-        } else if (Random.value < chanceToChangeDirection) {
-            speed *= -1;
-        }
+        } 
     }
     void FixedUpdate()
     {
-        
+        if (Random.value < chanceToChangeDirection) {
+            speed *= -1;
+        }
     }
 }
