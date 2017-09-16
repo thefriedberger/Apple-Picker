@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ApplePicker : MonoBehaviour {
     public GameObject basketPrefab;
@@ -33,5 +34,13 @@ public class ApplePicker : MonoBehaviour {
 
         basketList.RemoveAt(basketIndex);
         Destroy(tBasketGO);
+
+        IsGameOver(basketIndex);
+    }
+
+    public void IsGameOver (int basketsRemaining) {
+        if (basketsRemaining == 0) {
+            SceneManager.LoadScene(2);
+        }
     }
 }
