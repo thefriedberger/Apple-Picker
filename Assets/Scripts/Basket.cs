@@ -40,8 +40,8 @@ public class Basket : MonoBehaviour {
 
         scoreGT.text = score.ToString();
 
-        if (score > HighScore.score1) {
-            HighScore.score1 = score;
+        if (score > HighScore.score) {
+            HighScore.score = score;
         }
     }
 }
