@@ -12,9 +12,6 @@ public class AppleTree : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //dropping apples every second
-        InvokeRepeating("DropApple", 2f, secondsBetweenDrops);
-
         int level = DifficultySelect.difficulty;
 
         if (level == 1) {
@@ -24,10 +21,13 @@ public class AppleTree : MonoBehaviour {
             speed = 15f;
             secondsBetweenDrops = 0.3f;
         } else if (level == 3) {
-            speed = 45f;
-            secondsBetweenDrops = 0.05f;
+            speed = 50f;
+            secondsBetweenDrops = 0.005f;
             chanceToChangeDirection = 0.05f;
         }
+
+        //dropping apples every second
+        InvokeRepeating("DropApple", 2f, secondsBetweenDrops); 
     }
 
     void DropApple () {

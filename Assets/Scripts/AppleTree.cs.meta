@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 0d78aae6e052e824d88440dd2e288cda
-timeCreated: 1505500706
+timeCreated: 1505688116
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - applePrefab: {fileID: 1229579764748860, guid: 39305442b6979594d9a4ccfdd01e18e3,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
