@@ -9,6 +9,6 @@ public class EndScore : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         Text gt = this.GetComponent<Text>();
-        gt.text = "Game Over \n \n High Score: " + score;
+        gt.text = "Game Over \n \n Final Score: " + score;
     }
 }
