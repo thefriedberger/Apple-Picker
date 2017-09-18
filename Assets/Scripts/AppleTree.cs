@@ -19,7 +19,8 @@ public class AppleTree : MonoBehaviour {
             secondsBetweenDrops = 1f;
         } else if (level == 2) {
             speed = 15f;
-            secondsBetweenDrops = 0.3f;
+            secondsBetweenDrops = 0.5f;
+            chanceToChangeDirection = 0.075f;
         } else if (level == 3) {
             speed = 50f;
             secondsBetweenDrops = 0.005f;
