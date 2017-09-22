@@ -43,7 +43,7 @@ public class Basket : MonoBehaviour {
         if (score > HighScore.score) {
             HighScore.score = score;
         }
-
+        
         EndScore.score = score;
     }
 }
